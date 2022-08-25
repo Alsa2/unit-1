@@ -37,3 +37,13 @@ for item in x:
         lc = str[len-1:len]
         print("".join([fc, inter, lc]))
 ```
+
+** My blackbox
+| Input     | Output    |
+|-----------|-----------|
+| Bob       | CfC       |
+| My        | My        |
+| 1         | 1         |
+| 2022      | 3133      |
+| Hamburger | Ibfcmshfs |
+| #         | #         |
