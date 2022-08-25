@@ -16,7 +16,7 @@
 
 ### Quizz 001 Script
 
-""" .py
+``` .py
 import re
 x = str(input())
 if x == "":
@@ -36,4 +36,4 @@ for item in x:
         fc = str[:1]
         lc = str[len-1:len]
         print("".join([fc, inter, lc]))
- """
+```
