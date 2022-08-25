@@ -1,3 +1,4 @@
+#Main title
 2)
 Variables in computer programming:
 Variables are the names you give to computer memory locations which are used to store values in a computer program.
@@ -16,3 +17,6 @@ The four CTS:
 -Pattern Recognition (Find similarities in previous problems and reuse them)
 -Abstraction (Ability to focus on the important part and leave appart the useless)
 -Algorithmic Thinking (Cluster the solution into multiple simple steps easy to follow)
+""".py
+  print("Test")
+"""
