@@ -8,6 +8,8 @@ This cube was cut in about 25 000 thousand slices, it runt for about 5 months an
 models was about 2 million gigaoctecs.
 Or the humane brain is about 1 millions tymes bigger so we would need 2 Million Petabytes of storage. The equivalent of 2097152000000 Gb of storage. For comparison the entire internet is about 22 
 Millions Petabytes.
+```
 2097152000000 / 4
 524288000000
+```
 We would need 524288000000 4 Gb USB stick to store one human brain.
