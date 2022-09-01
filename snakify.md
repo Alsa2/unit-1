@@ -297,3 +297,234 @@ a = float(input())
 a = (a % (360 / 12))
 print(a / 60 * 360 * 2)s
 ```
+# Lesson 3
+
+## Is positive 
+
+Given an integer, print "YES" if it's positive and print "NO" otherwise. 
+
+``` .py
+a = int(input())
+if a > -1:
+    print("YES")
+else:
+    print("NO")
+```
+
+## Is odd
+
+Given an integer, print "YES" if it's odd and print "NO" otherwise. 
+
+``` .py
+a = int(input())
+if a % 2 == 0:
+    print("NO")
+else:
+    print("YES")
+```
+
+## Is even 
+
+Given an integer, print "YES" if it's even and print "NO" otherwise. 
+
+``` .py
+a = int(input())
+if a % 2 == 0:
+    print("YES")
+else:
+    print("NO")
+```
+## Ends on seven
+
+Given an integer, print "YES" if it's last digit is 7 and print "NO" otherwise.
+
+``` .py
+a = str(input())
+len = len(a)
+a = (a[len-1])
+if int(a) == 7:
+    print("YES")
+else:
+    print("NO")
+```
+## Minimum of two numbers
+
+Given two integers, print the smaller value. 
+
+``` .py
+a = int(input())
+b = int(input())
+if a > b:
+    print(b)
+else:
+    print(a)
+```
+## Are both odd
+
+Given two integers, print "YES" if they're both odd and print "NO" otherwise.
+
+``` .py
+a = int(input())
+b = int(input())
+if not a % 2 == 0 and not b % 2 == 0:
+    print("YES")
+else:
+    print("NO")
+```
+## At least one odd 
+
+Given two integers, print "YES" if at least one of them is odd and print "NO" otherwise. 
+
+``` .py
+a = int(input())
+b = int(input())
+if not a % 2 == 0 or not b % 2 == 0:
+    print("YES")
+else:
+    print("NO")
+```
+## Exactly one odd 
+
+Given two integers, print "YES" if exactly one of them is odd and print "NO" otherwise. 
+
+``` .py
+a = int(input())
+b = int(input())
+if (not a % 2 == 0 and b % 2 == 0) or ( a % 2 == 0 and not b % 2 == 0):
+    print("YES")
+else:
+    print("NO")
+```
+## Sign function
+
+For the given integer X print 1 if it's positive, -1 if it's negative, or 0 if it's equal to zero. 
+
+``` .py
+a = int(input())
+if a == 0:
+    print(0)
+if a > 0:
+    print(1)
+if a < 0:
+    print(-1)
+```
+## Numbers in ascending order
+
+Given three different integers, print YES if they're given in ascending order, print NO otherwise. 
+
+``` .py
+a = int(input())
+b = int(input())
+c = int(input())
+if a < b < c:
+    print("YES")
+else:
+    print("NO")
+```
+## Is three digit 
+
+Given an integer, print "YES" if it's a three-digit number and print "NO" otherwise. 
+
+``` .py
+a = str(input())
+a = len(a)
+if int(a) == 3:
+    print("YES")
+else:
+    print("NO")
+```
+## Minimum of three numbers 
+
+ Given three integers, print the smallest value. 
+
+``` .py
+a = int(input())
+b = int(input())
+c = int(input())
+if a > b:
+    if c > b:
+        print(b)
+if b > a:
+    if c > a:
+        print(a)
+if a > c:
+    if b > c:
+        print(c)
+```
+## Equal numbers
+
+ Given three integers, determine how many of them are equal to each other. The program must print one of these numbers: 3 (if all are the same), 2 (if two of them are equal to each other and the third is different) or 0 (if all numbers are different). 
+
+``` .py
+a = int(input())
+b = int(input())
+c = int(input())
+if a == b == c:
+    print(3)
+elif a == b or b == c or c == a and not a == b == c:
+    print(2)
+else:
+    print(0)
+```
+## Rook move 
+
+Chess rook moves horizontally or vertically. Given two different cells of the chessboard, determine whether a rook can go from the first cell to the second in one move.
+
+The program receives the input of four numbers from 1 to 8, each specifying the column and row number, first two - for the first cell, and then the last two - for the second cell. The program should output YES if a rook can go from the first cell to the second in one move, or NO otherwise. 
+
+``` .py
+x1 = int(input())
+y1 = int(input())
+x2 = int(input())
+y2 = int(input())
+if x1 == x2 or y1 == y2:
+    print("YES")
+else:
+    print("NO")
+```
+## Chess board - black square 
+
+Given a square of a chessboard. Print BLACK if it's black and print WHITE otherwise. 
+
+``` .py
+a = int(input())
+b = int(input())
+if (a+b) % 2 == 0:
+    print("BLACK")
+else:
+    print("WHITE")
+```
+## Chess board - same color 
+
+Given two cells of a chessboard. If they are painted in one color, print the word YES, and if in a different color - NO. 
+
+``` .py
+x1 = int(input())
+y1 = int(input())
+x2 = int(input())
+y2 = int(input())
+if (x1 + y1 + x2 + y2) % 2 == 0:
+    print('YES')
+else:
+    print('NO')
+```
+## Distance to closest point 
+
+ Given the coordinates of the three points A, B, and C on a line. Print a distance from the point A to closest point to it. 
+
+``` .py
+A = int(input())
+B = int(input())
+C = int(input())
+if abs(A - B) < abs(A - C):
+    print(abs(A - B))
+else:
+    print(abs(A - C))
+```
+## TEMPLAT_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
