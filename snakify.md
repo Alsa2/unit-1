@@ -521,7 +521,221 @@ if abs(A - B) < abs(A - C):
 else:
     print(abs(A - C))
 ```
-## TEMPLAT_TITLE
+## Digits in ascending order 
+
+Given a three-digit integer, print YES if its digits go in ascending order, print NO otherwise. 
+
+``` .py
+x = str(input())
+a = x[0]
+b = x[1]
+c = x[2]
+if a < b < c:
+    print("YES")
+else:
+    print("NO")
+```
+## Four-digit palindrome 
+
+ A palindrome is a number which reads the same when read forward as it it does when read backward. Given a four-digit integer, print "YES" if it's a palindrome and print "NO" otherwise. 
+
+``` .py
+x = str(input())
+a = x[0]
+b = x[1]
+c = x[2]
+d = x[3]
+if a + b == d + c:
+    print("YES")
+else:
+    print("NO")
+```
+## King move 
+
+Chess king moves horizontally, vertically or diagonally to any adjacent cell. Given two different cells of the chessboard, determine whether a king can go from the first cell to the second in one move.
+
+The program receives the input of four numbers from 1 to 8, each specifying the column and row number, first two - for the first cell, and then the last two - for the second cell. The program should output YES if a king can go from the first cell to the second in one move, or NO otherwise.
+
+
+``` .py
+x1 = int(input())
+y1 = int(input())
+x2 = int(input())
+y2 = int(input())
+s1 = abs(x1 - x2)
+s2 = abs(y1 - y2)
+if s1 <= 1 and s2 <= 1:
+    print('YES')
+else:
+    print('NO')
+```
+## Bishop moves
+
+In chess, the bishop moves diagonally, any number of squares. Given two different squares of the chessboard, determine whether a bishop can go from the first to the second in one move.
+
+The program receives as input four numbers from 1 to 8, specifying the column and row numbers of the starting square and the column and row numbers of the ending square. The program should output YES if a Bishop can go from the first square to the second in one move, or NO otherwise. 
+
+``` .py
+x1 = int(input())
+y1 = int(input())
+x2 = int(input())
+y2 = int(input())
+if abs(x1 - x2) == abs(y1 - y2):
+    print('YES')
+else:
+    print('NO')
+```
+## Queen move 
+
+Chess queen moves horizontally, vertically or diagonally to any number of cells. Given two different cells of the chessboard, determine whether a queen can go from the first cell to the second in one move.
+
+The program receives the input of four numbers from 1 to 8, each specifying the column and row number, first two - for the first cell, and then the last two - for the second cell. The program should output YES if a queen can go from the first cell to the second in one move, or NO otherwise. 
+
+``` .py
+x1 = int(input())
+y1 = int(input())
+x2 = int(input())
+y2 = int(input())
+if abs(x1 - x2) == abs(y1 - y2) or x1 == x2 or y1 == y2:
+    print('YES')
+else:
+    print('NO')
+```
+## Index of outlier 
+
+ Given three integers: two are equal to each other and the third one is different. Print the index number of this different one - 1, 2 or 3. 
+
+``` .py
+a = int(input())
+b = int(input())
+c = int(input())
+if a != b and a != c:
+    print("1")
+elif b != c and b != a:
+    print("2")
+else:
+    print("3")
+```
+## Knight move 
+
+Chess knight moves like the letter L. It can move two cells horizontally and one cell vertically, or two cells vertically and one cells horizontally. Given two different cells of the chessboard, determine whether a knight can go from the first cell to the second in one move.
+
+The program receives the input of four numbers from 1 to 8, each specifying the column and row number, first two - for the first cell, and then the last two - for the second cell. The program should output YES if a knight can go from the first cell to the second in one move, or NO otherwise. 
+
+``` .py
+x1 = int(input())
+y1 = int(input())
+x2 = int(input())
+y2 = int(input())
+if abs(x1 - x2) == 1 and abs(y1 - y2) == 2 or abs(x1 - x2) == 2 and abs(y1 - y2) == 1:
+    print('YES')
+else:
+    print('NO')
+```
+## Chocolate bar 
+
+Chocolate bar has the form of a rectangle divided into n×m portions. Chocolate bar can be split into two rectangular parts by breaking it along a selected straight line on its pattern. Determine whether it is possible to split it so that one of the parts will have exactly k squares.
+
+The program reads three integers: n, m, and k. It should print YES or NO. 
+
+``` .py
+n = int(input())
+m = int(input())
+k = int(input())
+if ((k % n == 0) or (k % m == 0)) and k < n * m:
+    print('YES')
+else:
+    print('NO')
+```
+## Leap year 
+
+Given the year number. You need to check if this year is a leap year. If it is, print LEAP, otherwise print COMMON.
+
+The rules in Gregorian calendar are as follows:
+
+-a year is a leap year if its number is exactly divisible by 4 and is not exactly divisible by 100
+-a year is always a leap year if its number is exactly divisible by 400 
+
+``` .py
+a = int(input())
+if (a % 4 == 0) and not (a % 100 == 0) or (a % 400 == 0):
+    print("LEAP")
+else:
+    print("COMMON")
+```
+## Days in month 
+
+ Given a month - an integer from 1 (January) to 12 (December), print the number of days in it in the year 2017 (or any other non-leap year). 
+
+``` .py
+a = int(input())
+if a == 1 or a == 3 or a == 5 or a == 7 or a == 8 or a == 10 or a == 12:
+    print("31")
+elif a == 2:
+    print("28")
+else:
+    print("30")
+```
+## Next day 
+
+ Given the month (an integer from 1 to 12) and the day in it (an integer from 1 to 31) in the year 2017 (or in any other common year), print the month and the day of the next day to it. The first test corresponds to March 30 and March 31. The second test corresponds to March 31 and April 1. 
+
+``` .py
+a = int(input())
+b = int(input())
+if a == 1 or a == 3 or a == 5 or a == 7 or a == 8 or a == 10 or a == 12:
+    day = 31
+elif a == 2:
+    day = 28
+else:
+    day = 30
+if day == 31:
+    if a == 12 and b == 31:
+        print("1")
+        print("1")
+    elif b == 31:
+        print(a + 1)
+        print(1)
+    else:
+        print(a)
+        print(b + 1)
+if day == 30:
+    if b == 30:
+        print(a + 1)
+        print(1)
+    else:
+        print(a)
+        print(b + 1)
+if day == 28:
+    if b == 28:
+        print(a + 1)
+        print(1)
+    else:
+        print(a)
+        print(b + 1)
+```
+## Linear equation 
+
+ Write a program that solves a linear equation ax = b in integers. Given two integers a and b (a may be zero), print a single integer root if it exists and print "no solution" or "many solutions" otherwise. 
+
+``` .py
+a = int(input())
+b = int(input())
+if a == 0 and b == 0:
+    print('many solutions')
+elif a == 0 and b != 0 or b % a != 0:
+    print('no solution')
+else:
+    print(b // a)
+```
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+## TEMPLATE_TITLE
 
 TEMPLATE_STATEMENT
 
