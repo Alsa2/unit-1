@@ -152,7 +152,7 @@ print(first, middle, last)
 
 ```
 # Exercice 4
-```
+```.py
 #the program will ask the user to enter the number of scores
 while True:
     try:
