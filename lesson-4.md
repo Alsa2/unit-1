@@ -17,7 +17,9 @@ HL:
 ``` .py
 # QUIZZ-2
 A = []
+#Crating a exit condition
 tempA = False
+#Creating a  temporal variable for checking if there is the leter C in the list
 temA = 0
 print("Enter the string and when you change number enter C")
 while temA != "C":
@@ -25,22 +27,27 @@ while temA != "C":
     if temA != "C":
         A.append(int(temA))
 B = []
+#Crating a exit condition
 tempB = False
+#Creating a  temporal variable for checking if there is the leter C in the list
 temB = 0
 print("Enter the string and when you change number enter C")
 while temB != "C":
     temB = input("Enter a number: ")
     if temB != "C":
         B.append(temB)
+#lenA means the length of A
 lenA = len(A)
+#lenB means the length of B
 lenB = len(B)
-var = False
+#Creating a variable for the final output
+finalstatement = False
 for i in range(lenA):
     for j in range(lenB):
         if int(A[i]) == 20 or int(B[j]) == 20 or int(A[i]) + (B[j]) == 20:
-            var = True
+            finalstatement = True
             break
-    if var == True:
+    if finalstatement == True:
         break
-print(var)
+print(finalstatement)
 ```
