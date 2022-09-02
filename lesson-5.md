@@ -17,3 +17,49 @@ for i in range(lenghtInput):
         OutputProtein += "G"
 print(OutputProtein)
 ``` .py
+
+### Exercice 1
+```
+height1 = int(input())
+height2 = int(input())
+height3 = int(input())
+if height1 > height2:
+    #swapping the heights
+    tmp = height1
+    height1 = height2
+    height2 = tmp
+if height1 > height3:
+    #swapping the heights
+    tmp = height1
+    height1 = height3
+    height3 = tmp
+if height2 > height3:
+    #swapping the heights
+    tmp = height3
+    height3 = height2
+    height2 = tmp
+print(height3)
+print(b)
+print(height1)
+```
+### Exercice 2
+```
+#only accept numbers in the variable income
+income = input("Enter your income: ")
+while not income.isdigit():
+    income = input("Enter your income (only digits): ")
+income = int(income)
+#if income is positive set the tax to 5%
+if income > 0:
+    tax = income * 0.05
+#if income > 10000 set the tax to 10%
+elif income > 10000:
+    tax = income * 0.1
+#if income > 50000 set the tax to 10%
+elif income > 50000:
+    tax = income * 0.15
+#if income > 100000 set the tax to 25%
+elif income > 100000:
+    tax = income * 0.25
+print("The IRS wants", tax, "dollars from you")
+```
