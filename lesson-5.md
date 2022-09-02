@@ -16,10 +16,10 @@ for i in range(lenghtInput):
     elif InputProtein[i] == "C":
         OutputProtein += "G"
 print(OutputProtein)
-``` .py
+```
 
 ### Exercice 1
-```
+```.py
 height1 = int(input())
 height2 = int(input())
 height3 = int(input())
@@ -43,7 +43,7 @@ print(b)
 print(height1)
 ```
 ### Exercice 2
-```
+```.py
 #only accept numbers in the variable income
 income = input("Enter your income: ")
 while not income.isdigit():
