@@ -1,1 +1,1 @@
-this is just a school project
+Welcome to my school GitHub repository, all snakily exercise are in snakily.md
