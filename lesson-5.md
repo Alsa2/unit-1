@@ -42,7 +42,7 @@ print(height3)
 print(b)
 print(height1)
 ```
-### Exercice 3
+### Exercice 2
 ```.py
 #only accept numbers in the variable income
 income = input("Enter your income: ")
@@ -63,7 +63,7 @@ elif income > 100000:
     tax = income * 0.25
 print("The IRS wants", tax, "dollars from you")
 ```
-### Exercice 2
+### Exercice 3
 ```.py
 
 #defining a function that converts alphabetical numbers to numerical numbers
