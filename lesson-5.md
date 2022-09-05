@@ -182,4 +182,8 @@ else:
 #the program will print the median
 print("The median is", median)
 ```
+### Flow Diagram
+![](Images/Lesson\ 5\ Flow\ Diagram.pdf)
+
+ **Fig. 1** My flow diagram
 
