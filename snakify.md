@@ -728,6 +728,206 @@ elif a == 0 and b != 0 or b % a != 0:
 else:
     print(b // a)
 ```
+## Vertices of rectangle 
+
+Given integer coordinates of three vertices of a rectangle whose sides are parallel to the coordinate axes, find the coordinates of the fourth vertex of the rectangle. In the first test the three given vertices are (1, 4), (1, 6), (7, 4). The fourth vertex is thus (7, 6). 
+
+``` .py
+x1 = int(input())
+y1 = int(input())
+x2 = int(input())
+y2 = int(input())
+x3 = int(input())
+y3 = int(input())
+if x1 == x2:
+    x4 = x3
+elif x1 == x3:
+    x4 = x2
+else:
+  x4 = x1
+if y1 == y2:
+    y4 = y3
+elif y1 == y3:
+    y4 = y2
+else:
+    y4 = y1
+print(x4)
+print(y4)
+```
+## Sort three numbers 
+
+Given three integers, print them in ascending order. 
+
+
+``` .py
+a = int(input())
+b = int(input())
+c = int(input())
+
+if a > b:
+    a, b = b, a
+if a > c:
+    a, c = c, a
+if b > c:
+    b, c = c, b
+
+print(a)
+print(b)
+print(c)
+```
+## White pawn move 
+
+A white chess pawn moves up vertically one square at a time. An exception is a pawn on a row #2: it can move either one or two squares up. In addition, a white chess pawn captures diagonally up one square to the left or right. A white chess pawn can never occur on a row #1.
+
+The program receives the input of four numbers from 1 to 8, each specifying the column and row number, first two - for the first square, and then the last two - for the second square. The program should print YES if a white pawn can possibly move from the first square to the second square in one move in some game - either by move or by capture. The program should print NO otherwise. The first four tests correspond to the green arrows on the picture below. 
+
+``` .py
+x1 = int(input())
+y1 = int(input())
+x2 = int(input())
+y2 = int(input())
+if abs(x1 - x2) < 2 and y1 > 1 and y1 < y2:
+    if y2 - y1 < 2:
+        print("YES")
+    elif y1 == 2 and y2 - y1 < 3 and x1 == x2:
+        print("YES")
+    else:
+        print("NO")
+else:
+    print("NO")
+```
+# Chapter 4
+## Count to N 
+
+ Given an integer N, print all the numbers from 1 to N. 
+
+``` .py
+n = int(input())
+x = 1
+while n >= x:
+    print(x)
+    x = x + 1
+```
+## Series - 1 
+
+ Given two integers A and B (A ≤ B). Print all numbers from A to B inclusively. 
+
+``` .py
+x = int(input())
+n = int(input())
+while n >= x:
+    print(x)
+    x = x + 1
+
+```
+## First N odd, ascending 
+
+ Given an integer N, print all the odd numbers from 1 to N in ascending order. 
+
+``` .py
+n = int(input())
+x = 1
+while n >= x:
+    if x % 2 == 1:
+        print(x)
+    x = x + 1
+```
+## Series - 2 
+
+ Given two integers A and B. Print all numbers from A to B inclusively, in ascending order, if A < B, or in descending order, if A ≥ B. 
+
+``` .py
+n1 = int(input())
+n2 = int(input())
+if n1 < n2:
+    while n2 >= n1:
+        print(n1)
+        n1 = n1 + 1
+else:
+    while n1 >= n2:
+        print(n1)
+        n1 = n1 -1
+
+```
+## First N even, descending 
+
+ Given an integer N, print all the even numbers from 0 to N in descending order. 
+
+``` .py
+n = int(input())
+for i in range(n, -1, -1):
+    if i % 2 == 0:
+        print(i)
+```
+## Sum of ten numbers 
+
+ 10 numbers are given in the input. Read them and print their sum. Use as few variables as you can. 
+
+``` .py
+while True:
+    try:
+        print(sum([int(input()) for i in range(10)]))
+        break
+    except:
+        print('Please enter a valid number')
+
+```
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
 ## TEMPLATE_TITLE
 
 TEMPLATE_STATEMENT
