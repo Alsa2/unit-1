@@ -872,19 +872,32 @@ while True:
         print('Please enter a valid number')
 
 ```
-## TEMPLATE_TITLE
+## Sum of N numbers 
 
-TEMPLATE_STATEMENT
+N numbers are given in the input. Read them and print their sum.
+
+The first line of input contains the integer N, which is the number of integers to follow. Each of the next N lines contains one integer. Print the sum of these N integers. 
 
 ``` .py
-TEMPLATE_SCRIPT
+n = int(input())
+sum = 0
+for i in range(n):
+            sum += int(input())
+print(sum)
+
 ```
-## TEMPLATE_TITLE
+## Product of N numbers 
 
-TEMPLATE_STATEMENT
+N numbers are given in the input. Read them and print their product.
+
+The first line of input contains a positive integer N: the number of integers to follow. Each of the next N lines contains one integer. Print the product of these N integers. 
 
 ``` .py
-TEMPLATE_SCRIPT
+n = int(input())
+product = 1
+for i in range(n):
+    product *= int(input())
+print(product)
 ```
 ## TEMPLATE_TITLE
 
