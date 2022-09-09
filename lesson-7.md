@@ -37,6 +37,7 @@ while x != 0:
 ```
 ### 123 v2
 ```.py
+Same thing as above but optimized with modulo
 x = int(input("Enter an amount of number: "))
 while x != 0:
     print(x % 4)
@@ -44,6 +45,7 @@ while x != 0:
 
 ```
 ### 123 v3
+Same thing as above but you can change the modulo number
 ```.py
 start_number = int(input("Enter an amount of number: "))
 y = int(input("Enter a number to go: "))
