@@ -5,7 +5,7 @@ In the quizz folder
 ![](Images/Lesson-7_Flow-Diagram.jpg)
 
  **Fig. 1** My flow diagram
-### Programm
+### Program of quizz
 ```.py
 tmp = int(input("Enter a number: "))
 x = tmp - 1
