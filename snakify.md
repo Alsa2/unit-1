@@ -899,48 +899,293 @@ for i in range(n):
     product *= int(input())
 print(product)
 ```
-## TEMPLATE_TITLE
+## Sum of cubes 
 
-TEMPLATE_STATEMENT
-
-``` .py
-TEMPLATE_SCRIPT
-```
-## TEMPLATE_TITLE
-
-TEMPLATE_STATEMENT
+For the given integer N calculate the following sum:
+1**3+2**3+…+N**3
 
 ``` .py
-TEMPLATE_SCRIPT
+n = int(input())
+sum = 0
+for i in range(1, n+1):
+    sum += i**3
+print(sum)
 ```
-## TEMPLATE_TITLE
+## Factorial 
 
-TEMPLATE_STATEMENT
+In mathematics, the factorial of an integer n, denoted by n! is the following product:
+n!=1×2×…×n
 
 ``` .py
-TEMPLATE_SCRIPT
+n = int(input())
+factorial = 1
+for i in range(1,n + 1):
+    factorial = factorial*i
+print(factorial)
 ```
-## TEMPLATE_TITLE
+## The number of zeros 
 
-TEMPLATE_STATEMENT
+Given N numbers: the first number in the input is N, after that N integers are given. Count the number of zeros among the given integers and print it.
+
+You need to count the number of numbers that are equal to zero, not the number of zero digits. 
 
 ``` .py
-TEMPLATE_SCRIPT
+n = int(input())
+count = 0
+for i in range(n):
+    if int(input()) == 0:
+        count += 1
+print(count)
 ```
-## TEMPLATE_TITLE
+## Adding factorials 
 
-TEMPLATE_STATEMENT
+Given an integer n, print the sum 1!+2!+3!+...+n!.
+
+This problem has a solution with only one loop, so try to discover it. And don't use the math library :) 
 
 ``` .py
-TEMPLATE_SCRIPT
+n = int(input())
+sum = 0
+for i in range(1, n+1):
+    factorial = 1
+    for j in range(1, i+1):
+        factorial *= j
+    sum += factorial
+print(sum)
 ```
-## TEMPLATE_TITLE
+## Squares in range 
 
-TEMPLATE_STATEMENT
+Given two integers A and B, print squares of all integer numbers between them, as shown below. There shouldn't be any spaces around * and =. The sep argument of the function print() may help you with that. 
 
 ``` .py
-TEMPLATE_SCRIPT
+A = int(input())
+B = int(input())
+for i in range(A, B+1):
+    print(i, '*', i, '=', i**2, sep='')
 ```
+## Ladder 
+
+For given integer n ≤ 9 print a ladder of n steps. The k-th step consists of the integers from 1 to k without spaces between them.
+
+To do that, you can use the sep and end arguments for the function print(). 
+
+``` .py
+n = int(input())
+for i in range(1, n+1):
+    print(*range(1, i+1), sep='', end="""
+""")
+```
+## Is prime 
+
+A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. Given an integer N > 1, print PRIME if it's prime and print COMPOSITE otherwise. 
+
+``` .py
+A = int(input())
+if A > 1:
+    for i in range(2, A):
+        if (A % i) == 0:
+            print("COMPOSITE")
+            break
+    else:
+        print("PRIME")
+```
+## Print primes in range 
+
+A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. Given two integers A and B, print all prime numbers between them, inclusively. 
+
+``` .py
+A = int(input())
+B = int(input())
+for i in range(A, B+1):
+    if i > 1:
+        for j in range(2, i):
+            if (i % j) == 0:
+                break
+        else:
+            print(i)
+```
+## Number of primes in range 
+
+ A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. Given two integers A and B, print the number of primes between them, inclusively. 
+
+``` .py
+A = int(input())
+B = int(input())
+def isPrime(n):
+    if n <= 1:
+        return False
+    for i in range(2, n):
+        if n % i == 0:
+            return False
+    return True
+count = 0
+for i in range(A, B+1):
+    if isPrime(i):
+        count += 1
+print(count)
+```
+## Lost card 
+
+There was a set of cards with numbers from 1 to N. One of the card is now lost. Determine the number on that lost card given the numbers for the remaining cards.
+
+Given a number N, followed by N − 1 integers - representing the numbers on the remaining cards (distinct integers in the range from 1 to N). Find and print the number on the lost card. 
+
+``` .py
+n = int(input())
+sum = 0
+for i in range(n-1):
+    sum += int(input())
+print(int(n*(n+1)/2 - sum))
+```
+#Chapter 5
+
+## Slices 
+
+You are given a string.
+
+In the first line, print the third character of this string.
+
+In the second line, print the second to last character of this string.
+
+In the third line, print the first five characters of this string.
+
+In the fourth line, print all but the last two characters of this string.
+
+In the fifth line, print all the characters of this string with even indices (remember indexing starts at 0, so the characters are displayed starting with the first).
+
+In the sixth line, print all the characters of this string with odd indices (i.e. starting with the second character in the string).
+
+In the seventh line, print all the characters of the string in reverse order.
+
+In the eighth line, print every second character of the string in reverse order, starting from the last one.
+
+In the ninth line, print the length of the given string. 
+
+``` .py
+s = input()
+print(s[2])
+print(s[-2])
+print(s[:5])
+print(s[:-2])
+print(s[::2])
+print(s[1::2])
+print(s[::-1])
+print(s[::-2])
+print(len(s))
+```
+## The number of words 
+
+ Given a string consisting of words separated by spaces. Determine how many words it has. To solve the problem, use the method count. 
+
+``` .py
+a= input()
+print(a.count(' ')+1)
+```
+## The two halves 
+
+Given a string. Cut it into two "equal" parts (If the length of the string is odd, place the center character in the first string, so that the first string contains one more characther than the second). Now print a new string on a single row with the first and second halfs interchanged (second half first and the first half second)
+
+Don't use the statement if in this task. 
+
+``` .py
+s = input()
+print(s[(len(s) + 1) // 2:] + s[:(len(s) + 1) // 2])
+```
+## To swap the two words 
+
+Given a string consisting of exactly two words separated by a space. Print a new string with the first and second word positions swapped (the second word is printed first).
+
+This task should not use loops and if. 
+
+``` .py
+s = input()
+print(s[s.find(' ')+1:] + ' ' + s[:s.find(' ')])
+```
+## The first and last occurrence 
+
+Given a string that may or may not contain a letter of interest. Print the index location of the first and last appearance of f. If the letter f occurs only once, then output its index. If the letter f does not occur, then do not print anything.
+
+Don't use loops in this task. 
+
+``` .py
+s = input()
+if s.count('f') == 1:
+    print(s.find('f'))
+elif s.count('f') > 1:
+    print(s.find('f'), s.rfind('f'))
+```
+## The second occurrence 
+
+ Given a string that may or may not contain the letter of interest. Print the index location of the second occurrence of the letter f. If the string contains the letter f only once, then print -1, and if the string does not contain the letter f, then print -2. 
+
+``` .py
+s = input()
+if s.count('f') == 1:
+    print(-1)
+elif s.count('f') == 0:
+    print(-2)
+else:
+    print(s.find('f', s.find('f') + 1))
+```
+## Remove the fragment 
+
+ Given a string in which the letter h occurs at least twice. Remove from that string the first and the last occurrence of the letter h, as well as all the characters between them. 
+
+``` .py
+s = str(input())
+print(s[:(s.find('h'))]+s[(s.rfind('h')+1):])
+```
+## Reverse the fragment 
+
+ Given a string in which the letter h occurs at least two times, reverse the sequence of characters enclosed between the first and last appearances. 
+
+``` .py
+s = input()
+i = s.find('h')
+j = s.rfind('h')
+print(s[:i] + s[i:j+1][::-1] + s[j+1:])
+```
+## Replace the substring 
+
+ Given a string. Replace in this string all the numbers 1 by the word one. 
+
+``` .py
+s = input()
+print(s.replace('1', 'one'))
+```
+## Delete a character 
+
+ Given a string. Remove from this string all the characters @. 
+
+``` .py
+s = input()
+print(s.replace('@', ''))
+```
+## Replace within the fragment 
+
+ Given a string. Replace every occurrence of the letter h by the letter H, except for the first and the last ones. 
+
+``` .py
+s = input()
+a = s[:s.find('h') + 1] 
+b = s[s.find('h') + 1:s.rfind('h')]
+c = s[s.rfind('h'):]
+s = a + b.replace('h', 'H') + c
+print(s)
+```
+## Delete every third character 
+
+ Given a string. Delete from it all the characters whose indices are divisible by 3. 
+
+``` .py
+s = input()
+t = ''
+for i in range(len(s)):
+    if i % 3 != 0:
+        t = t + s[i]
+print(t)
+```
+# Chapter 6
 ## TEMPLATE_TITLE
 
 TEMPLATE_STATEMENT
