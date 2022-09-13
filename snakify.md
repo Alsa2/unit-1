@@ -1186,6 +1186,241 @@ for i in range(len(s)):
 print(t)
 ```
 # Chapter 6
+## List of squares 
+
+ For a given integer N, print all the squares of integer numbers where the square is less than or equal to N, in ascending order. 
+
+``` .py
+N = int(input())
+i = 1
+while i ** 2 <= N:
+    print(i ** 2)
+    i += 1
+```
+## Least divisor 
+
+ Given an integer not less than 2. Print its smallest integer divisor greater than 1. 
+
+``` .py
+N = int(input())
+i = 2
+while i <= N:
+    if N % i == 0:
+        print(i)
+        break
+    i += 1
+```
+## The power of two 
+
+For a given integer N, find the greatest integer x where 2x is less than or equal to N. Print the exponent value and the result of the expression 2x.
+
+Don't use the operation **.
+
+``` .py
+n = int(input())
+two = 2
+x = 1
+while two <= n:
+    two *= 2
+    x += 1
+print(x - 1, two // 2)
+```
+## Morning jog 
+
+As a future athlete you just started your practice for an upcoming event. Given that on the first day you run x miles, and by the event you must be able to run y miles.
+
+Calculate the number of days required for you to finally reach the required distance for the event, if you increases your distance each day by 10% from the previous day.
+
+Print one integer representing the number of days to reach the required distance. 
+
+``` .py
+x = int(input())
+y = int(input())
+d = 1
+while x < y:
+    x = x * 1.1
+    d = d + 1
+print(d)
+```
+## The length of the sequence 
+
+ Given a sequence of non-negative integers, where each number is written in a separate line. Determine the length of the sequence, where the sequence ends when the integer is equal to 0. Print the length of the sequence (not counting the integer 0). The numbers following the number 0 should be omitted. 
+
+``` .py
+x = int(input())
+count = 0
+while x != 0:
+    x = int(input())
+    count += 1
+print(count)
+```
+## The sum of the sequence 
+
+ Determine the sum of all elements in the sequence, ending with the number 0. 
+
+``` .py
+x = int(input())
+sum = 0
+while x != 0:
+    sum += x
+    x = int(input())
+print(sum)
+```
+## The average of the sequence 
+
+ Determine the average of all elements of the sequence ending with the number 0. 
+
+``` .py
+x = int(input())
+sum = 0
+count = 0
+while x != 0:
+    sum = sum + x
+    count = count + 1
+    x = int(input())
+print(sum / count)
+```
+## The maximum of the sequence 
+
+ A sequence consists of integer numbers and ends with the number 0. Determine the largest element of the sequence. 
+
+``` .py
+s = int(input())
+max = s
+while s != 0:
+    s = int(input())
+    if s > max:
+        max = s
+print(max)
+```
+## The index of the maximum of a sequence 
+
+ A sequence consists of integer numbers and ends with the number 0. Determine the index of the largest element of the sequence. If the highest element is not unique, print the index of the first of them. 
+
+``` .py
+s = int(input())
+i = 0
+max = 0
+while s != 0:
+    i += 1
+    if s > max:
+        max = s
+        index = i
+    s = int(input())
+print(index)
+```
+## The number of even elements of the sequence 
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
 ## TEMPLATE_TITLE
 
 TEMPLATE_STATEMENT
