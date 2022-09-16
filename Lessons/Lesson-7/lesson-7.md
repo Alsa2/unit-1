@@ -2,7 +2,7 @@
 ### QUIZZ-5
 In the quizz folder
 ### Flow Diagram
-![](Images/Lesson-7_Flow-Diagram.jpg)
+![](../../Images/Lesson-7_Flow-Diagram.jpg)
 
  **Fig. 1** My flow diagram
 ### Program of quizz

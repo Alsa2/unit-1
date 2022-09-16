@@ -2,7 +2,7 @@
 ### QUIZZ-4
 In the quizz folder
 ### Flow Diagram
-![](Images/Lesson-6_Flow-Diagram.jpg)
+![](../../Images/Lesson-6_Flow-Diagram.jpg)
 
  **Fig. 1** My flow diagram
 ### Number tester

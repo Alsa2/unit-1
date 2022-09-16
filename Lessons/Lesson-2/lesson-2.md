@@ -1,7 +1,7 @@
 # Lesson 2
 ### Quizz 001 Solution
 
-![](Images/quiz001.jpg)
+![](../../Images/quiz001.jpg)
 
  **Fig. 1** This is the solution to the black box
  

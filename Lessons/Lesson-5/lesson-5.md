@@ -183,7 +183,7 @@ else:
 print("The median is", median)
 ```
 ### Flow Diagram
-![](Images/Lesson-5_Flow-Diagram.jpg)
+![](../../Images/Lesson-5_Flow-Diagram.jpg)
 
  **Fig. 1** My flow diagram
 
