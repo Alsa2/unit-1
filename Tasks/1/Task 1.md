@@ -1,4 +1,5 @@
 # Task 1
+Task 1: Create a program and the flow diagram that shows the colors of all the lockers from 1 to 2400
 ```.py
 def color(number):
     if number % 4 == 1:

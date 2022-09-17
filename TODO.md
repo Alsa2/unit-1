@@ -1,4 +1,4 @@
 # To do list
-- Finish Task 1 in lesson 8
-- Do HL quizz in quizz 4?
-- Upload lesson 8 quandratic equation solver
+
+- Finish Snakify
+- Finish AI (graphs?)

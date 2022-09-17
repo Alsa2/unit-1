@@ -1,4 +1,5 @@
 # Task 2:
+Task 2: Using the program above, create another program that allows the user to enter a number and the program outputs the color that should be used in the locker.
 ### v.1
 ```.py
 number = int(input("Input a locker number : "))

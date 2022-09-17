@@ -1,14 +1,38 @@
-#Funtions
-def validate_input(promt:str):
-    """This function asks the user for an input and validates the input is an integer"""
-    red = "\033[1;31m"
-    end_code = "\033[0m"
-    while True:
-        try:
-            #ask in a normal color
-            user_input = int(input(end_code + promt))
-            return user_input
-        except ValueError:
-            print(f"{red}Please enter a valid number")
+import random
+import sys
+import os
 
-print(validate_input("Enter a number: "))
+
+Names = dict()
+Names["Trump"] = "Donald"
+Names["Obama"] = "Barack"
+Names["Clinton"] = "Bill"
+Names["Bush"] = "George"
+Names["Reagan"] = "Ronald"
+Names["Carter"] = "Jimmy"
+Names["Ford"] = "Gerald"
+Names["Nixon"] = "Richard"
+Names["Johnson"] = "Lyndon"
+Names["Kennedy"] = "John"
+Names["Eisenhower"] = "Dwight"
+Names["Truman"] = "Harry"
+Names["Roosevelt"] = "Franklin"
+Names["Coolidge"] = "Calvin"
+Names["Hoover"] = "Herbert"
+
+
+
+
+LastName = ['Trump', 'Obama', 'Clinton', 'Bush', 'Reagan', 'Carter', 'Ford', 'Nixon', 'Johnson', 'Kennedy', 'Eisenhower', 'Truman', 'Roosevelt', 'Coolidge', 'Hoover']
+with open('studentdirectory.txt', 'w') as f:
+    pass
+
+
+
+for ln in LastName:
+    templockernum = random.randint(1,2400)
+    final = (f"{ln}, {Names[ln]}, {Names[ln]}.{ln}@uwcisak.jp, locker {templockernum}"),
+    with open('studentdirectory.txt', 'a') as f:
+        f.write(str(final))
+        f.write("\n")
+        f.close()
