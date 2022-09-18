@@ -1309,13 +1309,191 @@ while s != 0:
     s = int(input())
 print(index)
 ```
-## The number of even elements of the sequence 
+## The number of even elements of the sequence
 
-TEMPLATE_STATEMENT
+ Determine the number of even elements in the sequence ending with the number 0. 
 
 ``` .py
-TEMPLATE_SCRIPT
+s = int(input())
+count = 0
+while s != 0:
+    if s % 2 == 0:
+        count += 1
+    s = int(input())
+print(count)
 ```
+![](Images/Snakify/6.10.jpg)
+
+## The number of elements that are greater than the previous one 
+
+ A sequence consists of integer numbers and ends with the number 0. Determine how many elements of this sequence are greater than their neighbours above. 
+
+``` .py
+s = int(input())
+count = 0
+while s != 0:
+    s1 = int(input())
+    if s1 > s:
+        count += 1
+    s = s1
+print(count)
+```
+![](Images/Snakify/6.11.jpg)
+
+## The second maximum 
+
+ The sequence consists of distinct positive integer numbers and ends with the number 0. Determine the value of the second largest element in this sequence. It is guaranteed that the sequence has at least two elements. 
+
+``` .py
+s = []
+temp = 1
+while temp != 0:
+    temp = int(input())
+    s.append(temp)
+s.sort()
+print(s[-2])
+```
+![](Images/Snakify/6.12.jpg)
+
+## The number of elements equal to the maximum 
+
+ A sequence consists of integer numbers and ends with the number 0. Determine how many elements of this sequence are equal to its largest element. 
+
+``` .py
+s = []
+temp = 1
+while temp != 0:
+    temp = int(input())
+    s.append(temp)
+print(s.count(max(s)))
+```
+![](Images/Snakify/6.13.jpg)
+
+## Fibonacci numbers 
+
+The Fibonacci sequence is defined as follows:
+ϕ0=0, ϕ1=1, ϕn=ϕn−1+ϕn−2.
+Given a non-negative integer n, print the nth Fibonacci number ϕn.
+
+This problem can also be solved with a for loop. 
+
+``` .py
+def fib(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fib(n-1) + fib(n-2)
+n = int(input())
+print(fib(n))
+```
+![](Images/Snakify/6.14.jpg)
+
+## The index of a Fibonacci number 
+
+The Fibonacci sequence is defined as follows:
+ϕ0=0, ϕ1=1, ϕn=ϕn−1+ϕn−2.
+Given an integer a, determine its index among the Fibonacci numbers, that is, print the number n such that ϕn=a. If a is not a Fibonacci number, print -1. 
+
+``` .py
+n = int(input())
+a = 0
+b = 1
+c = 0
+count = 1
+while c < n:
+    c = a + b
+    a = b
+    b = c
+    count += 1
+if c == n:
+    print(count)
+else:
+    print(-1)
+
+```
+![](Images/Snakify/6.15.jpg)
+
+## The maximum number of consecutive equal elements 
+
+ Given a sequence of integer numbers ending with the number 0. Determine the length of the widest fragment where all the elements are equal to each other. 
+
+``` .py
+n = int(input())
+max = 1
+count = 1
+while n != 0:
+    n1 = int(input())
+    if n == n1:
+        count += 1
+        if max < count:
+            max = count
+    else:
+        count = 1
+    n = n1
+print(max)
+
+```
+![](Images/Snakify/6.16.jpg)
+
+# Chapter 7
+
+## Even indices 
+
+ Given a list of numbers, find and print all the list elements with an even index number. (i.e. A[0], A[2], A[4], ...). 
+
+``` .py
+s = str(input())
+s = s.split()
+for i in range(0, len(s), 2):
+    print(s[i], end=' ')
+```
+![](Images/Snakify/7.1.jpg)
+
+## Even elements 
+
+ Given a list of numbers, find and print all elements that are an even number. In this case use a for-loop that iterates over the list, and not over its indices! That is, don't use range() 
+
+``` .py
+numbers = str(input())
+numbers = numbers.split()
+for number in numbers:
+    if int(number) % 2 == 0:
+        print((number), end=" ")
+```
+![](Images/Snakify/7.2.jpg)
+
+## Greater than previous 
+
+ Given a list of numbers, find and print all the elements that are greater than the previous element. 
+
+``` .py
+s = str(input())
+s = s.split()
+for i in range(1, len(s)):
+    if int(s[i]) > int(s[i-1]):
+        print(s[i], end=' ')
+
+```
+![](Images/Snakify/7.3.jpg)
+
+## Neighbors of the same sign 
+
+ Given a list of numbers, find and print the first adjacent elements which have the same sign. If there is no such pair, leave the output blank. 
+
+``` .py
+s = str(input())
+s = s.split()
+for i in range(len(s)):
+    s[i] = int(s[i])
+for i in range(len(s) - 1):
+    if s[i] * s[i + 1] > 0:
+        print(s[i], s[i + 1])
+        break
+```
+![](Images/Snakify/7.4.jpg)
+
 ## TEMPLATE_TITLE
 
 TEMPLATE_STATEMENT
@@ -1323,6 +1501,8 @@ TEMPLATE_STATEMENT
 ``` .py
 TEMPLATE_SCRIPT
 ```
+![](Images/Snakify/x.x.jpg)
+
 ## TEMPLATE_TITLE
 
 TEMPLATE_STATEMENT
@@ -1330,6 +1510,8 @@ TEMPLATE_STATEMENT
 ``` .py
 TEMPLATE_SCRIPT
 ```
+![](Images/Snakify/x.x.jpg)
+
 ## TEMPLATE_TITLE
 
 TEMPLATE_STATEMENT
@@ -1337,6 +1519,8 @@ TEMPLATE_STATEMENT
 ``` .py
 TEMPLATE_SCRIPT
 ```
+![](Images/Snakify/x.x.jpg)
+
 ## TEMPLATE_TITLE
 
 TEMPLATE_STATEMENT
@@ -1344,6 +1528,8 @@ TEMPLATE_STATEMENT
 ``` .py
 TEMPLATE_SCRIPT
 ```
+![](Images/Snakify/x.x.jpg)
+
 ## TEMPLATE_TITLE
 
 TEMPLATE_STATEMENT
@@ -1351,6 +1537,8 @@ TEMPLATE_STATEMENT
 ``` .py
 TEMPLATE_SCRIPT
 ```
+![](Images/Snakify/x.x.jpg)
+
 ## TEMPLATE_TITLE
 
 TEMPLATE_STATEMENT
@@ -1358,6 +1546,8 @@ TEMPLATE_STATEMENT
 ``` .py
 TEMPLATE_SCRIPT
 ```
+![](Images/Snakify/x.x.jpg)
+
 ## TEMPLATE_TITLE
 
 TEMPLATE_STATEMENT
@@ -1365,6 +1555,8 @@ TEMPLATE_STATEMENT
 ``` .py
 TEMPLATE_SCRIPT
 ```
+![](Images/Snakify/x.x.jpg)
+
 ## TEMPLATE_TITLE
 
 TEMPLATE_STATEMENT
@@ -1372,6 +1564,8 @@ TEMPLATE_STATEMENT
 ``` .py
 TEMPLATE_SCRIPT
 ```
+![](Images/Snakify/x.x.jpg)
+
 ## TEMPLATE_TITLE
 
 TEMPLATE_STATEMENT
@@ -1379,6 +1573,8 @@ TEMPLATE_STATEMENT
 ``` .py
 TEMPLATE_SCRIPT
 ```
+![](Images/Snakify/x.x.jpg)
+
 ## TEMPLATE_TITLE
 
 TEMPLATE_STATEMENT
@@ -1386,6 +1582,8 @@ TEMPLATE_STATEMENT
 ``` .py
 TEMPLATE_SCRIPT
 ```
+![](Images/Snakify/x.x.jpg)
+
 ## TEMPLATE_TITLE
 
 TEMPLATE_STATEMENT
@@ -1393,6 +1591,8 @@ TEMPLATE_STATEMENT
 ``` .py
 TEMPLATE_SCRIPT
 ```
+![](Images/Snakify/x.x.jpg)
+
 ## TEMPLATE_TITLE
 
 TEMPLATE_STATEMENT
@@ -1400,6 +1600,8 @@ TEMPLATE_STATEMENT
 ``` .py
 TEMPLATE_SCRIPT
 ```
+![](Images/Snakify/x.x.jpg)
+
 ## TEMPLATE_TITLE
 
 TEMPLATE_STATEMENT
@@ -1407,6 +1609,8 @@ TEMPLATE_STATEMENT
 ``` .py
 TEMPLATE_SCRIPT
 ```
+![](Images/Snakify/x.x.jpg)
+
 ## TEMPLATE_TITLE
 
 TEMPLATE_STATEMENT
@@ -1414,6 +1618,8 @@ TEMPLATE_STATEMENT
 ``` .py
 TEMPLATE_SCRIPT
 ```
+![](Images/Snakify/x.x.jpg)
+
 ## TEMPLATE_TITLE
 
 TEMPLATE_STATEMENT
@@ -1421,6 +1627,8 @@ TEMPLATE_STATEMENT
 ``` .py
 TEMPLATE_SCRIPT
 ```
+![](Images/Snakify/x.x.jpg)
+
 ## TEMPLATE_TITLE
 
 TEMPLATE_STATEMENT
@@ -1428,6 +1636,8 @@ TEMPLATE_STATEMENT
 ``` .py
 TEMPLATE_SCRIPT
 ```
+![](Images/Snakify/x.x.jpg)
+
 ## TEMPLATE_TITLE
 
 TEMPLATE_STATEMENT
@@ -1435,3 +1645,274 @@ TEMPLATE_STATEMENT
 ``` .py
 TEMPLATE_SCRIPT
 ```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
