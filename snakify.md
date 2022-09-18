@@ -1494,832 +1494,14 @@ for i in range(len(s) - 1):
 ```
 ![](Images/Snakify/7.4.jpg)
 
-## Greater than neighbours 
+## TEMPLATE_TITLE
 
-Given a list of numbers, determine and print the quantity of elements that are greater than both of their neighbors.
-
-The first and the last items of the list shouldn't be considered because they don't have two neighbors. 
+TEMPLATE_STATEMENT
 
 ``` .py
-s = str(input())
-s = s.split()
-s = [int(i) for i in s]
-count = 0
-for i in range(1, len(s) - 1):
-    if s[i] > s[i - 1] and s[i] > s[i + 1]:
-        count += 1
-print(count)
+TEMPLATE_SCRIPT
 ```
-![](Images/Snakify/7.5.jpg)
-
-## The largest element 
-
- Given a list of numbers. Determine the element in the list with the largest value. Print the value of the largest element and then the index number. If the highest element is not unique, print the index of the first instance. 
-
-``` .py
-s = str(input())
-list = s.split()
-max = 0
-for i in range(len(list)):
-    if int(list[i]) > int(list[max]):
-        max = i
-print(list[max], max)
-```
-![](Images/Snakify/7.6.jpg)
-
-## The number of distinct elements 
-
- Given a list of numbers with all of its elements sorted in ascending order, determine and print the quantity of distinct elements in it. 
-
-``` .py
-s = str(input())
-s = s.split()
-s = [int(i) for i in s]
-s = set(s)
-print(len(s))
-```
-![](Images/Snakify/7.7.jpg)
-
-## Swap neighbours 
-
- Given a list of numbers, swap adjacent items in pairs (A[0] with A[1], A[2] with A[3], etc.). Print the resulting list. If a list has an odd number of elements, leave the last element in place. 
-
-``` .py
-s = str(input())
-s = s.split()
-if len(s) % 2 == 0:
-    for i in range(0, len(s), 2):
-        s[i], s[i+1] = s[i+1], s[i]
-else:
-    for i in range(0, len(s)-1, 2):
-        s[i], s[i+1] = s[i+1], s[i]
-print(' '.join(s))
-
-```
-![](Images/Snakify/7.8.jpg)
-
-## Swap min and max 
-
- Given a list of unique numbers, swap the minimal and maximal elements of this list. Print the resulting list. 
-
-``` .py
-s = str(input())
-s = s.split()
-s = [int(i) for i in s]
-min = s[0]
-max = s[0]
-for i in s:
-    if i < min:
-        min = i
-    if i > max:
-        max = i
-for i in range(len(s)):
-    if s[i] == min:
-        s[i] = max
-    elif s[i] == max:
-        s[i] = min
-print(*s)
-
-```
-![](Images/Snakify/7.9.jpg)
-
-## The number of pairs of equal 
-
- Given a list of numbers, count how many element pairs have the same value (are equal). Any two elements that are equal to each other should be counted exactly once. 
-
-``` .py
-l = str(input())
-l = l.split()
-l = [int(i) for i in l]
-count = 0
-for i in range(len(l)):
-    for j in range(len(l)):
-        if i != j and l[i] == l[j]:
-            count += 1
-print(count // 2)
-```
-![](Images/Snakify/7.10.jpg)
-
-## Unique elements 
-
- Given a list of numbers, find and print the elements that appear in the list only once. The elements must be printed in the order in which they occur in the original list. 
-
-``` .py
-l = str(input())
-l = l.split()
-for i in l:
-    if l.count(i) == 1:
-        print(i, end = ' ')
-```
-![](Images/Snakify/7.11.jpg)
-
-## Queens 
-
- In chess it is known that it is possible to place 8 queens on an 8×8 chess board such that none of them can attack another. Given a placement of 8 queens on the board, determine if there is a pair of queens that can attach each other on the next move. Print the word NO if no queen can attack another, otherwise print YES. The input consists of eight coordinate pairs, one pair per line, with each pair giving the position of a queen on a standard chess board with rows and columns numbered starting at 1. 
-
-``` .py
-q1 = str(input())
-q2 = str(input())
-q3 = str(input())
-q4 = str(input())
-q5 = str(input())
-q6 = str(input())
-q7 = str(input())
-q8 = str(input())
-q1 = q1.split()
-q2 = q2.split()
-q3 = q3.split()
-q4 = q4.split()
-q5 = q5.split()
-q6 = q6.split()
-q7 = q7.split()
-q8 = q8.split()
-q1[0] = int(q1[0])
-q1[1] = int(q1[1])
-q2[0] = int(q2[0])
-q2[1] = int(q2[1])
-q3[0] = int(q3[0])
-q3[1] = int(q3[1])
-q4[0] = int(q4[0])
-q4[1] = int(q4[1])
-q5[0] = int(q5[0])
-q5[1] = int(q5[1])
-q6[0] = int(q6[0])
-q6[1] = int(q6[1])
-q7[0] = int(q7[0])
-q7[1] = int(q7[1])
-q8[0] = int(q8[0])
-q8[1] = int(q8[1])
-if q1[0] == q2[0] or q1[1] == q2[1] or q1[0] + q1[1] == q2[0] + q2[1] or q1[0] - q1[1] == q2[0] - q2[1]:
-    print("YES")
-elif q1[0] == q3[0] or q1[1] == q3[1] or q1[0] + q1[1] == q3[0] + q3[1] or q1[0] - q1[1] == q3[0] - q3[1]:
-    print("YES")
-elif q1[0] == q4[0] or q1[1] == q4[1] or q1[0] + q1[1] == q4[0] + q4[1] or q1[0] - q1[1] == q4[0] - q4[1]:
-    print("YES")
-elif q1[0] == q5[0] or q1[1] == q5[1] or q1[0] + q1[1] == q5[0] + q5[1] or q1[0] - q1[1] == q5[0] - q5[1]:
-    print("YES")
-elif q1[0] == q6[0] or q1[1] == q6[1] or q1[0] + q1[1] == q6[0] + q6[1] or q1[0] - q1[1] == q6[0] - q6[1]:
-    print("YES")
-elif q1[0] == q7[0] or q1[1] == q7[1] or q1[0] + q1[1] == q7[0] + q7[1] or q1[0] - q1[1] == q7[0] - q7[1]:
-    print("YES")
-elif q1[0] == q8[0] or q1[1] == q8[1] or q1[0] + q1[1] == q8[0] + q8[1] or q1[0] - q1[1] == q8[0] - q8[1]:
-    print("YES")
-elif q2[0] == q3[0] or q2[1] == q3[1] or q2[0] + q2[1] == q3[0] + q3[1] or q2[0] - q2[1] == q3[0] - q3[1]:
-    print("YES")
-elif q2[0] == q4[0] or q2[1] == q4[1] or q2[0] + q2[1] == q4[0] + q4[1] or q2[0] - q2[1] == q4[0] - q4[1]:
-    print("YES")
-elif q2[0] == q5[0] or q2[1] == q5[1] or q2[0] + q2[1] == q5[0] + q5[1] or q2[0] - q2[1] == q5[0] - q5[1]:
-    print("YES")
-elif q2[0] == q6[0] or q2[1] == q6[1] or q2[0] + q2[1] == q6[0] + q6[1] or q2[0] - q2[1] == q6[0] - q6[1]:
-    print("YES")
-elif q2[0] == q7[0] or q2[1] == q7[1] or q2[0] + q2[1] == q7[0] + q7[1] or q2[0] - q2[1] == q7[0] - q7[1]:
-    print("YES")
-elif q2[0] == q8[0] or q2[1] == q8[1] or q2[0] + q2[1] == q8[0] + q8[1] or q2[0] - q2[1] == q8[0] - q8[1]:
-    print("YES")
-elif q3[0] == q4[0] or q3[1] == q4[1] or q3[0] + q3[1] == q4[0] + q4[1] or q3[0] - q3[1] == q4[0] - q4[1]:
-    print("YES")
-elif q3[0] == q5[0] or q3[1] == q5[1] or q3[0] + q3[1] == q5[0] + q5[1] or q3[0] - q3[1] == q5[0] - q5[1]:
-    print("YES")
-elif q3[0] == q6[0] or q3[1] == q6[1] or q3[0] + q3[1] == q6[0] + q6[1] or q3[0] - q3[1] == q6[0] - q6[1]:
-    print("YES")
-elif q3[0] == q7[0] or q3[1] == q7[1] or q3[0] + q3[1] == q7[0] + q7[1] or q3[0] - q3[1] == q7[0] - q7[1]:
-    print("YES")
-elif q3[0] == q8[0] or q3[1] == q8[1] or q3[0] + q3[1] == q8[0] + q8[1] or q3[0] - q3[1] == q8[0] - q8[1]:
-    print("YES")
-elif q4[0] == q5[0] or q4[1] == q5[1] or q4[0] + q4[1] == q5[0] + q5[1] or q4[0] - q4[1] == q5[0] - q5[1]:
-    print("YES")
-elif q4[0] == q6[0] or q4[1] == q6[1] or q4[0] + q4[1] == q6[0] + q6[1] or q4[0] - q4[1] == q6[0] - q6[1]:
-    print("YES")
-elif q4[0] == q7[0] or q4[1] == q7[1] or q4[0] + q4[1] == q7[0] + q7[1] or q4[0] - q4[1] == q7[0] - q7[1]:
-    print("YES")
-elif q4[0] == q8[0] or q4[1] == q8[1] or q4[0] + q4[1] == q8[0] + q8[1] or q4[0] - q4[1] == q8[0] - q8[1]:
-    print("YES")
-elif q5[0] == q6[0] or q5[1] == q6[1] or q5[0] + q5[1] == q6[0] + q6[1] or q5[0] - q5[1] == q6[0] - q6[1]:
-    print("YES")
-elif q5[0] == q7[0] or q5[1] == q7[1] or q5[0] + q5[1] == q7[0] + q7[1] or q5[0] - q5[1] == q7[0] - q7[1]:
-    print("YES")
-elif q5[0] == q8[0] or q5[1] == q8[1] or q5[0] + q5[1] == q8[0] + q8[1] or q5[0] - q5[1] == q8[0] - q8[1]:
-    print("YES")
-elif q6[0] == q7[0] or q6[1] == q7[1] or q6[0] + q6[1] == q7[0] + q7[1] or q6[0] - q6[1] == q7[0] - q7[1]:
-    print("YES")
-elif q6[0] == q8[0] or q6[1] == q8[1] or q6[0] + q6[1] == q8[0] + q8[1] or q6[0] - q6[1] == q8[0] - q8[1]:
-    print("YES")
-elif q7[0] == q8[0] or q7[1] == q8[1] or q7[0] + q7[1] == q8[0] + q8[1] or q7[0] - q7[1] == q8[0] - q8[1]:
-    print("YES")
-else:
-    print("NO")
-```
-![](Images/Snakify/7.12.jpg)
-
-## The bowling alley 
-
- In bowling, the player starts wtih 10 pins at the far end of a lane. The object is to knock all the pins down. For this exercise, the number of pins and balls will vary. Given the number of pins N and then the number of balls K to be rolled, followed by K pairs of numbers (one for each ball rolled), determine which pins remain standing after all the balls have been rolled. The balls are numbered from 1 to N (inclusive) for this situation. The subsequent number pairs, one for each K represent the start to stop (inclusive) positions of the pins that were knocked down with each role. Print a sequence of N characters, where "I" represents a pin left standing and "." represents a pin knocked down. 
-
-``` .py
-N, K = [int(s) for s in input().split()]
-alley = ['I'] * N
-for i in range(K):
-    left, right = [int(s) for s in input().split()]
-    for j in range(left - 1, right):
-        alley[j] = '.'
-print(''.join(alley))
-```
-![](Images/Snakify/7.13.jpg)
-
-# Chapter 8
-
-## The length of the segment 
-
-Given four real numbers representing cartesian coordinates: (x1,y1),(x2,y2). Write a function distance(x1, y1, x2, y2) to compute the distance between the points (x1,y1) and (x2,y2). Read four real numbers and print the resulting distance calculated by the function.
-
-The formula for distance between two points can be found at Wolfram. 
-
-``` .py
-def distance(x1, y1, x2, y2):
-    return ((x2 - x1)**2 + (y2 - y1)**2)**0.5
-x1 = float(input("Enter x1: "))
-y1 = float(input("Enter y1: "))
-x2 = float(input("Enter x2: "))
-y2 = float(input("Enter y2: "))
-print(distance(x1, y1, x2, y2))
-```
-![](Images/Snakify/8.1.jpg)
-
-## Negative exponent 
-
-Given a positive real number a and integer n.
-
-Compute a**n. Write a function power(a, n) to calculate the results using the function and print the result of the expression.
-
-Don't use the same function from the standard library. 
-
-``` .py
-def power(a, n):
-    result = 1
-    for i in range(abs(n)):
-        result *= a
-    if n >= 0:
-        return result
-    else:
-        return 1 / result
-
-print(power(float(input()), int(input())))
-```
-![](Images/Snakify/8.2.jpg)
-
-## Uppercase 
-
-Write a function capitalize(lower_case_word) that takes the lower case word and returns the word with the first letter capitalized. Eg., print(capitalize('word')) should print the word Word.
-
-Then, given a line of lowercase ASCII words (text separated by a single space), print it with the first letter of each word capitalized using the your own function capitalize().
-
-In Python there is a function ord(character), which returns character code in the ASCII chart, and the function chr(code), which returns the character itself from the ASCII code. For example, ord('a') == 97, chr(97) == 'a'. 
-
-``` .py
-def capitalize(a):
-    st = a.split(" ")
-    result = []
-    for i in range(len(st)):
-        b = st[i]
-        c = b[0].upper() + b[1:len(st[i])]
-        result.append(c)
-    return(" ".join(result))
-print(capitalize(input()))
-```
-![](Images/Snakify/8.3.jpg)
-
-## Exponentiation 
-
-Given a positive real number a and a non-negative integer n. Calculate an without using loops, ** operator or the built in function math.pow(). Instead, use recursion and the relation an=a⋅an−1. Print the result.
-
-Form the function power(a, n). 
-
-``` .py
-def power(a, n):
-    if n == 0:
-        return 1
-    else:
-        return a * power(a, n - 1)
-a = float(input())
-n = int(input())
-print(power(a, n))
-```
-![](Images/Snakify/8.4.jpg)
-
-## Reverse the sequence 
-
-Given a sequence of integers that end with a 0. Print the sequence in reverse order.
-
-Don't use lists or other data structures. Use the force of recursion instead. 
-
-``` .py
-def reverse():
-    x = int(input())
-    if x != 0:
-        reverse()
-    print(x)
-
-reverse()
-```
-![](Images/Snakify/8.5.jpg)
-
-## Fibonacci numbers 
-
-Given a non-negative integer n, print the nth Fibonacci number. Do this by writing a function fib(n) which takes the non-negative integer n and returns the nth Fibonacci number.
-
-Don't use loops, use the flair of recursion instead. However, you should think about why the recursive method is much slower than using loops. 
-
-``` .py
-def fib(n):
-    if n == 0:
-        return 0
-    elif n == 1:
-        return 1
-    else:
-        return fib(n - 1) + fib(n - 2)
-
-
-print(fib(int(input())))
-
-```
-![](Images/Snakify/8.6.jpg)
-
-# Chapter 9
-
-## Maximum 
-
-Given two integers representing the rows and columns (m×n), and subsequent m rows of n elements, find the index position of the maximum element and print two numbers representing the index (i×j) or the row number and the column number. If there exist multiple such elements in different rows, print the one with smaller row number. If there multiple such elements occur on the same row, output the smallest column number. 
-
-``` .py
-n, m = [int(j) for j in input().split()]
-a = [[int(j) for j in input().split()] for i in range(n)]
-max_row = 0
-max_col = 0
-max = a[max_row][max_col]
-for i in range(n):
-    for j in range(m):
-        if max < a[i][j]:
-            max = a[i][j]
-            max_row = i
-            max_col = j
-print(max_row, max_col)
-```
-![](Images/Snakify/9.1.jpg)
-
-## Snowflake 
-
-Given an odd number integer n, produce a two-dimensional array of size (n×n). Fill each element with a single character string of "." . Then fill the middle row, the middle column and the diagnals with the single character string of "*" (an image of a snow flake). Print the array elements in (n×n) rows and columns and separate the characters with a single space. 
-
-``` .py
-n = int(input())
-a = [['.'] * n for i in range(n)]
-for i in range(n):
-    a[n // 2][i] = '*'
-    a[i][n // 2] = '*'
-    a[i][i] = '*'
-    a[n-i-1][i] = '*'
-for row in a:
-    print(' '.join(row))
-
-```
-![](Images/Snakify/9.2.jpg)
-
-## Chess board 
-
-Given two numbers n and m. Create a two-dimensional array of size (n×m) and populate it with the characters "." and "*" in a checkerboard pattern. The top left corner should have the character "." . 
-
-``` .py
-def board(n, m):
-    if (n + m) % 2 == 0:
-        return '.'
-    else:
-        return '*'
-
-n, m = [int(j) for j in input().split()]
-a = [[board(i, j) for j in range(m)] for i in range(n)]
-for row in a:
-    print(' '.join(row))
-```
-![](Images/Snakify/9.3.jpg)
-
-## The diagonal parallel to the main 
-
-Given an integer n, produce a two-dimensional array of size (n×n) and complete it according to the following rules, and print with a single space between characters:
-
-    On the main diagonal write 0 .
-    On the diagonals adjacent to the main, write 1 .
-    On the next adjacent diagonals write 2 and so forth. 
-
-Print the elements of the resulting array. 
-
-``` .py
-n = int(input())
-a = [[0] * n for i in range(n)]
-for i in range(n):
-    for j in range(n):
-        a[i][j] = abs(i - j)
-for i in range(n):
-    print(*a[i])
-```
-![](Images/Snakify/9.4.jpg)
-
-## Side diagonal 
-
-Given an integer n, create a two-dimensional array of size (n×n) and populate it as follows, with spaces between each character:
-
-    The positions on the minor diagonal (from the upper right to the lower left corner) receive 1 .
-    The positions above this diagonal recieve 0 .
-    The positions below the diagonal receive 2 . 
-
-Print the elements of the resulting array. 
-
-``` .py
-n = int(input())
-matrix = [[0 for i in range(n)] for j in range(n)]
-for i in range(n):
-    for j in range(n):
-        if i + j == n - 1:
-            matrix[i][j] = 1
-        elif i + j > n - 1:
-            matrix[i][j] = 2
-for i in range(n):
-    print(*matrix[i])
-```
-![](Images/Snakify/9.5.jpg)
-
-## Swap the columns 
-
-Given two positive integers m and n, m lines of n elements, giving an m×n matrix A, followed by two non-negative integers i and j less than n, swap columns i and j of A and print the result.
-
-Write a function swap_columns(a, i, j) and call it to exchange the columns. 
-
-``` .py
-def swap_columns(a, i, j):
-    for row in a:
-        row[i], row[j] = row[j], row[i]
-    return a
-m, n = map(int, input().split())
-a = [list(map(int, input().split())) for _ in range(m)]
-i, j = map(int, input().split())
-a = swap_columns(a, i, j)
-for row in a:
-    print(*row)
-```
-![](Images/Snakify/9.6.jpg)
-
-## Scale a matrix 
-
-Given two positive integers m and n, m lines of n elements, giving an m×n matrix A, followed by one integer c, multiply every entry of the matrix by c and print the result. 
-
-``` .py
-m, n = map(int, input().split())
-A = [[int(x) for x in input().split()] for _ in range(m)]
-c = int(input())
-for row in A:
-    print(*[x*c for x in row])
-```
-![](Images/Snakify/9.7.jpg)
-
-## Multiply two matrices 
-
-Given three positive integers m, n and r, m lines of n elements, giving an m×n matrix A, and n lines of r elements, giving an n×r matrix B, form the product matrix AB, which is the m×r matrix whose (i,k) entry is the sum
-A[i][1]∗B[1][k]+⋯+A[i][n]∗B[n][k]
-and print the result. 
-
-``` .py
-temp = input()
-m, n, r = temp.split()
-m = int(m)
-n = int(n)
-r = int(r)
-A = []
-B = []
-for i in range(m):
-    temp = input()
-    temp = temp.split()
-    A.append(temp)
-for i in range(n):
-    temp = input()
-    temp = temp.split()
-    B.append(temp)
-for i in range(m):
-    for j in range(r):
-        sum = 0
-        for k in range(n):
-            sum = sum + int(A[i][k]) * int(B[k][j])
-        print(sum, end = " ")
-    print()
-```
-![](Images/Snakify/9.8.jpg)
-
-# Chapter 10
-
-## The number of distinct numbers 
-
-Given a list of integers. Determine how many distinct numbers there are.
-
-This task can be solved in one line of code.
-
-``` .py
-print(len(set([int(i) for i in input().split()])))
-```
-![](Images/Snakify/10.1.jpg)
-
-## The number of equal numbers 
-
-Given two lists of numbers. Count how many unique numbers occur in both of them.
-
-This task can be solved in one line of code.
-
-``` .py
-print(len(set(input().split()) & set(input().split())))
-```
-![](Images/Snakify/10.2.jpg)
-
-## The intersection of sets 
-
-Given two lists of numbers. Find all the numbers that occur in both the first and the second list and print them in ascending order.
-
-Even this task can be solved in one line of code.
-
-``` .py
-print(*sorted(set(input().split()) & set(input().split())))
-```
-![](Images/Snakify/10.3.jpg)
-
-## Has the number been encountered before 
-
- Given a sequence of numbers, determine if the next number has already been encountered. For each number, print the word YES (in a separate line) if this number has already been encountered, and print NO, if it has not already been encountered.
-
-``` .py
-n = input().split()
-s = set()
-for i in n:
-    if i in s:
-        print("YES")
-    else:
-        print("NO")
-        s.add(i)
-```
-![](Images/Snakify/10.4.jpg)
-
-## Cubes 
-
-Alice and Bob like to play with colored cubes. Each child has its own set of cubes and each cube has a distinct color, but they want to know how many unique colors exist if they combine their block sets. To determine this, the kids enumerated each distinct color with a random number from 0 to 108. At this point their enthusiasm dried up, and you are invited to help them finish the task.
-
-Given two integers that indicate the number of blocks in Alice's and then Bob's sets N
-and M. The following N lines contain the numerical color value for each cube in Alice's set. Then the last M
-
-rows contain the numberical color value for each cube in Bob's set.
-
-Find three sets: the numerical colors of cubes in both sets, the numerical colors of cubes only in Alice's set, and the numerical colors of cubes only in Bob's set. For each set, print the number of elements in the set, followed by the numerical color elements, sorted in ascending order. 
-
-``` .py
-n, m = [int(j) for j in input().split()]
-A = set()
-B = set()
-for i in range(n):
-    A.add(int(input()))
-for i in range(m):
-    B.add(int(input()))
-C = A & B
-D = A - B
-Е = B - A
-print(len(C))
-print(*sorted(C), key=int)
-print(len(D))
-print(*sorted(D), key=int)
-print(len(Е))
-print(*sorted(Е), key=int)
-```
-![](Images/Snakify/10.4.jpg)
-
-## The number of distinct words in some text 
-
-Given a number n, followed by n lines of text, print the number of distinct words that appear in the text.
-
-For this, we define a word to be a sequence of non-whitespace characters, seperated by one or more whitespace or newline characters. Punctuation marks are part of a word, in this definition.
-
-``` .py
-n = int(input())
-words = []
-for i in range(n):
-    words += input().split()
-print(len(set(words)))
-```
-![](Images/Snakify/10.5.jpg)
-
-## Guess the number 
-
-Augustus and Beatrice play the following game. Augustus thinks of a secret integer number from 1 to n. Beatrice tries to guess the number by providing a set of integers. Augustus answers YES if his secret number exists in the provided set, or NO, if his number does not exist in the provided numbers. Then after a few questions Beatrice, totally confused, asks you to help her determine Augustus's secret number.
-
-Given the value of n
-in the first line, followed by the a sequence Beatrice's guesses, series of numbers seperated by spaces and Agustus's responses, or Beatrice's plea for HELP. When Beatrice calls for help, provide a list of all the remaining possible secret numbers, in ascending order, separated by a space.
-
-``` .py
-n = int(input())
-numbers = [i for i in range(1, n+1)]
-while True:
-    try:
-        guess = input().split()
-        if guess[0] == "HELP":
-            print(*numbers)
-            break
-        else:
-            guess = [int(i) for i in guess]
-            answer = input()
-            if answer == "YES":
-                numbers = [i for i in numbers if i in guess]
-            else:
-                numbers = [i for i in numbers if i not in guess]
-    except EOFError:
-        break
-```
-![](Images/Snakify/10.6.jpg)
-
-## Polyglots 
-
-Each student at a certain school speaks a number of languages. We need to determine which languges are spoken by all the students, which languages are spoken by at least one student.
-
-Given, the number of students, and then for each student given the number of languages they speak followed by the name of each language spoken, find and print the number of languages spoken by all the students, followed by a list the languages by name, then print the number of languages spoken by at least one student, followed by the list of the languages by name. Print the languages in alphabetical order.
-
-``` .py
-s = [{input() for j in range(int(input()))} for i in range(int(input()))]
-lall, lone = set.intersection(*s), set.union(*s)
-print(len(lall), *sorted(lall), sep='\n')
-print(len(lone), *sorted(lone), sep='\n')
-```
-![](Images/Snakify/10.7.jpg)
-
-## Number of occurrences 
-
-The text is given in a single line. For each word of the text count the number of its occurrences before it.
-
-A word is a sequence of non-whitespace characters. Two consecutive words are separated by one or more spaces. Punctiation marks are a part of a word, by this definition. 
-
-``` .py
-words = input().split()
-for i in range(len(words)):
-    print(words[:i].count(words[i]), end=' ')
-```
-![](Images/Snakify/11.1.jpg)
-
-## Dictionary of synonyms 
-
-You are given a dictionary consisting of word pairs. Every word is a synonym the other word in its pair. All the words in the dictionary are different.
-
-After the dictionary there's one more word given. Find a synonym for him.
-
-``` .py
-n = int(input())
-d = {}
-for i in range(n):
-    k, v = input().split()
-    d[k] = v
-    d[v] = k
-print(d[input()])
-```
-![](Images/Snakify/11.2.jpg)
-
-## Elections in the USA 
-
-As you know, the president of USA is elected not by direct vote, but through a two-step voting. First elections are held in each state and determine the winner of elections in that state. Thereafter, the state election is going: in this election, every state has a certain the number of votes — the number of electors from that state. In practice, all the electors from the state of voted in accordance with the results of the vote within a state.
-
-The first line contains the number of records. After that, each entry contains the name of the candidate and the number of votes they got in one of the states. Count the total results of the elections: sum the number of votes for each candidate. Print candidates in the alphabetical order.
-
-``` .py
-n = int(input())
-d = {}
-for i in range(n):
-    name, votes = input().split()
-    votes = int(votes)
-    if name in d:
-        d[name] += votes
-    else:
-        d[name] = votes
-for name in sorted(d):
-    print(name, d[name])
-```
-![](Images/Snakify/11.3.jpg)
-
-## The most frequent word 
-
- Given the text: the first line contains the number of lines, then given the lines of words. Print the word in the text that occurs most often. If there are many such words, print the one that is less in the alphabetical order.
-
-``` .py
-l = int(input())
-s = []
-for i in range(l):
-    s += input().split()
-d = {}
-for i in s:
-    d[i] = d.get(i, 0) + 1
-m = max(d.values())
-for i in sorted(d):
-    if d[i] == m:
-        print(i)
-        break
-```
-![](Images/Snakify/11.4.jpg)
-
-## Access rights 
-
-The virus attacked the filesystem of the supercomputer and broke the control of access rights to the files. For each file there is a known set of operations which may be applied to it:
-
-    write W,
-    read R,
-    execute X. 
-
-The first line contains the number N — the number of files contained in the filesystem. The following N lines contain the file names and allowed operations with them, separated by spaces. The next line contains an integer M — the number of operations to the files. In the last M lines specify the operations that are requested for files. One file can be requested many times.
-
-You need to recover the control over the access rights to the files. For each request your program should return OK if the requested operation is valid or Access denied if the operation is invalid.
-
-``` .py
-permissions = {}
-n = int(input())
-for _ in range(n):
-     s = input().split()
-     permissions[s[0]] = set(s[1:])
-for _ in range(int(input())):
-     perm, file = input().split()
-     if perm == 'read':
-         perm = 'R'
-     if perm == 'write':
-         perm = 'W'
-     if perm == 'execute':
-         perm = 'X'
-     if perm in permissions[file]:
-         print('OK')
-     else:
-         print('Access denied')
-```
-![](Images/Snakify/11.5.jpg)
-
-## Countries and cities 
-
- Given a list of countries and cities of each country. Then given the names of the cities. For each city specify the country in which it is located.
-
-``` .py
-n = int(input())
-d = {}
-for i in range(n):
-    country, *cities = input().split()
-    for city in cities:
-        d[city] = country
-m = int(input())
-for i in range(m):
-    print(d[input()])
-```
-![](Images/Snakify/11.6.jpg)
-
-## Frequency analysis 
-
-Given a number n, followed by n lines of text, print all words encountered in the text, one per line. The words should be sorted in descending order according to their number of occurrences in the text, and all words with the same frequency should be printed in lexicographical order.
-
-Hint. After you create a dictionary of the words and their frequencies, you would like to sort it according to the frequencies. This can be achieved if you create a list whose elements are tuples of two elements: the frequency of occurrence of a word and the word itself. For example, [(2, 'hi'), (1, 'what'), (3, 'is')]. Then the standard list sort will sort a list of tuples, with the tuples compared by the first element, and if these are equal, by the second element. This is nearly what is required in the problem.
-
-``` .py
-counter = {}
-for i in range(int(input())):
-    line = input().split()
-    for word in line:
-        counter[word] = counter.get(word, 0) + 1
-
-for i in sorted(counter.items(), key=lambda x:(-x[1],x[0])): 
-    print(i[0])
-```
-![](Images/Snakify/11.7.jpg)
-
-## English-Latin dictionary 
-
-One day, going through old books in the attic, a student Bob found English-Latin dictionary. By that time he spoke English fluently, and his dream was to learn Latin. So finding the dictionary was just in time.
-
-Unfortunately, full-fledged language studying process requires also another type of dictionary: Latin-English. For lack of a better way he decided to make a second dictionary using the first one.
-
-As you know, the dictionary consists of words, each of which contains multiple translations. For each Latin word that appears anywhere in the dictionary, Bob has to find all its translations (that is, all English words, for which our Latin word is among its translations), and take them and only them as the translations of this Latin word.
-
-Help him to create a Latin-English.
-
-The first line contains a single integer N — the number of English words in the dictionary. Followed by N dictionary entries. Each entry is contained on a separate line, which contains first the English word, then a hyphen surrounded by spaces and then comma-separated list with the translations of this English word in Latin. All the words consist only of lowercase English letters. The translations are sorted in lexicographical order. The order of English words in the dictionary is also lexicographic.
-
-Print the corresponding Latin-English dictionary in the same format. In particular, the first word line should be the lexicographically minimal translation of the Latin word, then second in that order, etc. Inside the line the English words should be sorted also lexicographically. 
-
-``` .py
-n = int(input())
-ld = dict()
-for i in range(n):
-    ew, lw = input().split(" - ")
-    lws = lw.split(", ")
-    for w in lws:
-        if w in ld:
-            ld[w].append(ew)
-        else:
-            ld[w] = [ew]
-print(len(ld))
-for lw in sorted(ld):
-    print(lw, " - ", ", ".join(ld[lw]))
-```
-![](Images/Snakify/11.8.jpg)
+![](Images/Snakify/x.x.jpg)
 
 ## TEMPLATE_TITLE
 
@@ -2330,4 +1512,407 @@ TEMPLATE_SCRIPT
 ```
 ![](Images/Snakify/x.x.jpg)
 
-I did it, after so many hours, I did it. Now I can rest
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
+
+## TEMPLATE_TITLE
+
+TEMPLATE_STATEMENT
+
+``` .py
+TEMPLATE_SCRIPT
+```
+![](Images/Snakify/x.x.jpg)
