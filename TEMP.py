@@ -1,21 +1,34 @@
-import re
-x = str(input())
-if x == "":
-    print("Empty String")
-    exit()
-wordcount = (len(re.findall(r'\w+',x)))
-x = x.split()
-for item in x:
-    item = str(item)
-    #lw is the length of the word
-    lw = int(len(item))
-    #the inter variable is the number of times the word in the word
-    inter = str(lw -2)
-    if lw < 3:
-        print(item)
-    else:
-        str = item
-        len = len(str)
-        fc = str[:1]
-        lc = str[len-1:len]
-        print("".join([fc, inter, lc]))
+A = []
+#Crating a exit condition
+tempA = False
+#Creating a  temporal variable for checking if there is the leter C in the list
+temA = 0
+print("Enter the string and when you change number enter C")
+while temA != "C":
+    temA = input("Enter a number: ")
+    if temA != "C":
+        A.append(int(temA))
+B = []
+#Crating a exit condition
+tempB = False
+#Creating a  temporal variable for checking if there is the leter C in the list
+temB = 0
+print("Enter the string and when you change number enter C")
+while temB != "C":
+    temB = input("Enter a number: ")
+    if temB != "C":
+        B.append(temB)
+#lenA means the length of A
+lenA = len(A)
+#lenB means the length of B
+lenB = len(B)
+#Creating a variable for the final output
+finalstatement = False
+for i in range(lenA):
+    for j in range(lenB):
+        if int(A[i]) == 20 or int(B[j]) == 20 or int(A[i]) + (B[j]) == 20:
+            finalstatement = True
+            break
+    if finalstatement == True:
+        break
+print(finalstatement)
