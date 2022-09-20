@@ -1,34 +1,13 @@
-A = []
-#Crating a exit condition
-tempA = False
-#Creating a  temporal variable for checking if there is the leter C in the list
-temA = 0
-print("Enter the string and when you change number enter C")
-while temA != "C":
-    temA = input("Enter a number: ")
-    if temA != "C":
-        A.append(int(temA))
-B = []
-#Crating a exit condition
-tempB = False
-#Creating a  temporal variable for checking if there is the leter C in the list
-temB = 0
-print("Enter the string and when you change number enter C")
-while temB != "C":
-    temB = input("Enter a number: ")
-    if temB != "C":
-        B.append(temB)
-#lenA means the length of A
-lenA = len(A)
-#lenB means the length of B
-lenB = len(B)
-#Creating a variable for the final output
-finalstatement = False
-for i in range(lenA):
-    for j in range(lenB):
-        if int(A[i]) == 20 or int(B[j]) == 20 or int(A[i]) + (B[j]) == 20:
-            finalstatement = True
-            break
-    if finalstatement == True:
-        break
-print(finalstatement)
+InputProtein = str(input("Enter your proteins : "))
+lenghtInput = len(InputProtein)
+OutputProtein = ""
+for i in range(lenghtInput):
+    if InputProtein[i] == "A":
+        OutputProtein += "T"
+    elif InputProtein[i] == "T":
+        OutputProtein += "A"
+    elif InputProtein[i] == "G":
+        OutputProtein += "C"
+    elif InputProtein[i] == "C":
+        OutputProtein += "G"
+print(OutputProtein)

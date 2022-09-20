@@ -16,3 +16,6 @@ for i in range(lenghtInput):
         OutputProtein += "G"
 print(OutputProtein)
 ```
+![](../Images/quiz3.-flowchart.png)
+
+ **Fig. 1** Flowchart
