@@ -8,10 +8,10 @@ if A == 20 or B == 20 or A + B == 20:
     print("TRUE")
 else:
     print("FALSE")
+```
 ![](../Images/quiz2.1-flowchart.png)
 
  **Fig. 1** My flow diagram
-```
 HL:
 ``` .py
 # QUIZZ-2
