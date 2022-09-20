@@ -42,3 +42,6 @@ for item in x:
         print("".join([fc, inter, lc]))
 ```
 ![](Images/quiz1-flowchart.jpg)
+**Fig. 2** FlowChart
+![](Images/quizz1proof.png)
+**Fig. 3** Proofs
