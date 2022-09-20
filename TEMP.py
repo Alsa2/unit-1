@@ -10,4 +10,7 @@ for i in range(lenghtInput):
         OutputProtein += "C"
     elif InputProtein[i] == "C":
         OutputProtein += "G"
+    else:
+        print("Invalid Caracter")
+        exit(0)
 print(OutputProtein)
