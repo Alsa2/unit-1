@@ -22,3 +22,7 @@ print(OutputProtein)
 ![](../Images/quiz3.-flowchart.png)
 
  **Fig. 1** Flowchart
+
+![](../Images/quizz3proof.png)
+
+ **Fig. 2** Flowchart

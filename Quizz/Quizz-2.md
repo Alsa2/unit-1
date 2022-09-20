@@ -52,4 +52,8 @@ print(finalstatement)
 ```
 ![](../Images/quiz2.2-flowchart.png)
 
- **Fig. 1** My flow diagram (also there is a start and end circle, flowchart to big to render and screenshot on my small screen)
+ **Fig. 2** My flow diagram (also there is a start and end circle, flowchart to big to render and screenshot on my small screen)
+
+![](../Images/quizz2proof.png)
+
+ **Fig. 3** Flowchart
