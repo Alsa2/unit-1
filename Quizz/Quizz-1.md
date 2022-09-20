@@ -41,7 +41,7 @@ for item in x:
         lc = str[len-1:len]
         print("".join([fc, inter, lc]))
 ```
-![](Images/quiz1-flowchart.jpg)
+![](../Images/quiz1-flowchart.jpg)
 **Fig. 2** FlowChart
-![](Images/quizz1proof.png)
+![](../Images/quizz1proof.png)
 **Fig. 3** Proofs
