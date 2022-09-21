@@ -1,6 +1,6 @@
 # QUIZZ-4
 ### Perfect number checker
-'''python
+``` .py
 #make i script that checks if a number is perfect or not
 #perfect number is a number that is equal to the sum of its divisors
 #example: 6 is a perfect number because 6 = 1 + 2 + 3
@@ -27,7 +27,7 @@ if perfect_number(inputnumber):
 else:
     #if the number is not perfect print this
     print("The number is not perfect")
-'''
+```
 ![](../Images/quizz4-flowchart-main.png)
 
  **Fig. 1** Flowchart main script
