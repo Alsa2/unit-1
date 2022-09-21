@@ -17,7 +17,7 @@ def factors(n):
 
 n = input("Enter a number: ")
 print(factors(int(n)))
-``` .py
+```
 ![](../Images/quizz-5-flow-diagram.png)
 
  **Fig. 1** Flow diagram
