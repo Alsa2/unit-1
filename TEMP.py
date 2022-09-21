@@ -1,16 +1,17 @@
-InputProtein = str(input("Enter your proteins : "))
-lenghtInput = len(InputProtein)
-OutputProtein = ""
-for i in range(lenghtInput):
-    if InputProtein[i] == "A":
-        OutputProtein += "T"
-    elif InputProtein[i] == "T":
-        OutputProtein += "A"
-    elif InputProtein[i] == "G":
-        OutputProtein += "C"
-    elif InputProtein[i] == "C":
-        OutputProtein += "G"
-    else:
-        print("Invalid Caracter")
-        exit(0)
-print(OutputProtein)
+import numbers
+
+
+# print all factors of a number
+def factors(n):
+    if not isinstance(n, numbers.Integral):
+        raise TypeError('n must be an integer')
+    if n < 1:
+        raise ValueError('n must be positive')
+    result = []
+    for k in range(1, n + 1):
+        if n % k == 0:
+            result.append(k)
+    return result
+
+n = input("Enter a number: ")
+print(factors(int(n)))
