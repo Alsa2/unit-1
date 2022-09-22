@@ -1,7 +1,6 @@
 #import charging_log.cvs
 import csv
 import time
-import os
 
 
 def box(message, color):
@@ -66,18 +65,29 @@ while True:
             print(row)
     elif choice == "2":
         print("Average time per kWh")
-        average = 0
-        for row in csv:
-            average += int(row[1])
+        total_time = 0
+        total_kwh = 0
+        i=0
+        for line in csv:
+            if i > 0:
+                data = line
+                temp_time = data[2]
+                temp_time = temp_time.split(":")
+                temp_time = int(temp_time[0]) * 60 + int(temp_time[1])
+                total_time += temp_time
+                charge = line[1]
+                total_kwh = float(charge.replace("kWh", ""))
+            i+=1
+        msg = "Average time per kWh: " + str(total_time/total_kwh)
+        box(msg, "green")
     elif choice == "3":
         total = 0
         for row in csv:
             charge = row[1]
             charge_cleaned = charge.replace("kWh", "")
             total += float(charge_cleaned)
-            msg = "Total kWh used: " + str(total)
-            box(msg, "green")
-        print("Total consumption is :",total)
+        msg = "Total kWh used: " + str(total)
+        box(msg, "green")
     elif choice == "4":
         print("Total charge time")
         sum = 0

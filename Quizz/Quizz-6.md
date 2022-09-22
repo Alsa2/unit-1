@@ -12,7 +12,4 @@ for i in s:
         sum += ord(i) - 96
 print(sum)
 ```
-### v.2
-``` .py
-To do
-```
+

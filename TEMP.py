@@ -1,17 +1,10 @@
-import numbers
-
-
-# print all factors of a number
-def factors(n):
-    if not isinstance(n, numbers.Integral):
-        raise TypeError('n must be an integer')
-    if n < 1:
-        raise ValueError('n must be positive')
-    result = []
-    for k in range(1, n + 1):
-        if n % k == 0:
-            result.append(k)
-    return result
-
-n = input("Enter a number: ")
-print(factors(int(n)))
+# Quizz 4
+s = input()
+#s = s.lower()
+sum = 0
+for i in s:
+    if i.isupper():
+        sum += ord(i) - 64
+    elif i.islower():
+        sum += ord(i) - 96
+print(sum)
