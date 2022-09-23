@@ -1,4 +1,3 @@
 # To do list
 
-- Finish Snakify
-- Finish AI (graphs?)
+- finish quizz 10 temp file

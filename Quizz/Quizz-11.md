@@ -1,6 +1,7 @@
-# Create a function that shows the days of a moth for the year 2022 in a nice way
-#Whitout using the calendar module
+# Quizz 11
+### Sl and Hl Program
 
+```.py
 #creating the function
 def bestMonth(month: int, year: int) -> None:
     #calculate the number of days of the month
@@ -49,5 +50,45 @@ def bestMonth(month: int, year: int) -> None:
     return ("")
     
 
-out = bestMonth(9, 1945)
+out = bestMonth(1, 2006)
 print(out)
+    
+
+
+```
+### Flowchart
+It's in the Photo folders, the name is quizz11-flowchart.pdf
+(i coulnt't convert it to png (too low quality to see something), so i uploaded it as pdf)
+
+### Proof
+
+```
+December 2022
+Mo Tu We Th Fr Sa Su
+          1  2  3  4 
+ 5  6  7  8  9 10 11 
+12 13 14 15 16 17 18 
+19 20 21 22 23 24 25 
+26 27 28 29 30 31 
+
+
+
+February 2006
+Mo Tu We Th Fr Sa Su
+                   1 
+ 2  3  4  5  6  7  8 
+ 9 10 11 12 13 14 15 
+16 17 18 19 20 21 22 
+23 24 25 26 27 28 29 
+30 31 
+
+
+
+September 1945
+Mo Tu We Th Fr Sa Su
+                1  2 
+ 3  4  5  6  7  8  9 
+10 11 12 13 14 15 16 
+17 18 19 20 21 22 23 
+24 25 26 27 28 29 30
+```
