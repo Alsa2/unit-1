@@ -1,4 +1,4 @@
-# Quizz 5
+# Quizz 7
 I liked this quizz
 ``` .py
 import random

@@ -1,5 +1,5 @@
-SL:
-### v.1
+# Quizz 6
+Given a string
 ``` .py
 # Quizz 4
 s = input()
@@ -12,4 +12,3 @@ for i in s:
         sum += ord(i) - 96
 print(sum)
 ```
-
