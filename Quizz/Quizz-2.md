@@ -50,10 +50,10 @@ for i in range(lenA):
         break
 print(finalstatement)
 ```
-![](../Images/quiz2.2-flowchart.png)
+![](../../Images/quiz2.2-flowchart.png)
 
  **Fig. 2** My flow diagram (also there is a start and end circle, flowchart to big to render and screenshot on my small screen)
 
-![](../Images/quizz2proof.png)
+![](../../Images/quizz2proof.png)
 
- **Fig. 3** Flowchart
+ **Fig. 3** Proof
