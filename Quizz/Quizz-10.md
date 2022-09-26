@@ -45,3 +45,14 @@ def power(n):
 
 print("\n".join(power(n)))
 ```
+![](../../Images/lesson10-mainscript.png)
+
+ **Fig. 1** My flow diagram
+
+ ![](../../Images/lesson10-definition.png)
+
+ **Fig. 1** My flow diagram definition
+
+ ![](../../Images/quizz-10-proof.png)
+
+ **Fig. 1** Proof
