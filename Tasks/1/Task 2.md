@@ -104,3 +104,6 @@ if color == "blue":
     prBlue(color.upper().center(80, '#'))
     prBlue("################################################################################")
 ```
+### Proof
+![](../../Images/task-1-2-proof.png)
+ **Fig. 1** Proof
