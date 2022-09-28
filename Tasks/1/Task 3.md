@@ -33,15 +33,6 @@ def box(message, color):
     print("╚══════════════════════════════════════════════════════════════════════════════╝")
     print(end_code)
 
-def color(number):
-    if number % 4 == 1:
-        return "red"
-    elif number % 4 == 2:
-        return "white"
-    elif number % 4 == 3:
-        return "yellow"
-    else:
-        return "blue"
 
 
 def checker():
@@ -69,7 +60,14 @@ def color(number):
 
 color = color(checker())
 print(color)
-for i in range(1, 2400):
+for i in range(1, 2401):
     if i % 4 == color:
-        box(str(i), color(1))
+        print(i)
+        box(str(i), str(color(1)))
+    if i % 4 == 0:
+        box(str(i), str("blue"))
 ```
+
+### Proof
+![](../../Images/task-1-3-proof.png)
+ **Fig. 1** Proof

@@ -59,3 +59,6 @@ for ln in LastName:
 ('Coolidge, Calvin, Calvin.Coolidge@uwcisak.jp, locker 2029',)
 ('Hoover, Herbert, Herbert.Hoover@uwcisak.jp, locker 799',)
 ```
+### Proof
+![](../../Images/task-1-4-proof.png)
+ **Fig. 1** Proof

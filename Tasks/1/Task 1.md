@@ -15,3 +15,14 @@ while x < 2401:
     print(x, "is",color(x))
     x += 1
 ```
+### Proof
+![](../../Images/task-1-1-proof.png)
+ **Fig. 1** Proof
+
+ ### Flow Diagram
+![](../../Images/task-1-1-scriptflowchart.png)
+ **Fig. 1** Flow Diagram of color definition
+
+  ### Flow Diagram
+![](../../Images/task-1-1-functionflowchart.png)
+ **Fig. 1** Flow Diagram of color definition
