@@ -1,25 +1,15 @@
-# Create a function that produces the ouput given the input shown below.
-
-#hello word = 1112 12131
-#aaaAABB = 12345612 
-#abABabAB = 11223344
-#Create a Function = 111112 2 1122111
-
-
-def blackbox(string):
-    temp = ""
-    string = list(string.lower())
-    for i in range(len(string)):
-        if string[i] == " ":
-            temp += " "
+shift = int(input('Enter shift: '))
+def cipher(string):
+    string = string.lower()
+    new_string = ''
+    for letter in string:
+        if letter.isalpha():
+            if ord(letter) + shift > 122:
+                new_string += chr(ord(letter)+shift-26)
+            else:
+                new_string += chr(ord(letter)+shift)
         else:
-            letters = 0
-            for j in range(i+1):
-                if string[i] == string[j]:
-                    letters += 1
-            temp += str(letters)
+            new_string += letter
+    return new_string
 
-    return temp
-while True:
-    string = input("Enter a string: ")
-    print(blackbox(string))
+print(cipher(input("Enter string: ")))

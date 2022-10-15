@@ -25,3 +25,10 @@ def cipher(string):
 
 print(cipher(input("Enter string: ")))
 ```
+![](../Images/quizz9-flowchart.png)
+
+ **Fig. 1** Flochart
+
+ ![](../Images/quizz9-proof.png)
+
+ **Fig. 1** Proofs
