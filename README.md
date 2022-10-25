@@ -1,9 +1,9 @@
-Welcome to my school GitHub repository, all snakily exercise are in snakily.md
+# Welcome to my school GitHub repository, all snakily exercise are in snakily.md
 
-What worked well during unit 1?
+### What worked well during unit 1?
 I learned how to use github for managing my repo. Also i learned some more mython with snakify. Also quizzes were pretty fun (exept the flofcharts. I think that i had fun making my project 1.
 
-What did not work well?
+### What did not work well?
 Snakify (too long and boring), Flowchart (I dont like drawing). Also I didn't enjoyed the english part + flochart in the project 1. 
 
 ### What did you enjoyed the most during project unit-1?
